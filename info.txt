@@ -1,0 +1,8 @@
+--------------
+
+
+//Hook : es una funcion que le otorga a un componente una nueva habilidad. todos los hooks arracan con use"algo"
+//useState - useEffect - useContext - useReducer - useMemo - useCallback
+//siempre van adentro del componente
+//nunca van dentro de condicionales ni bucles
+//el useState me devuelve dos cosas metidas en un array : el estado en si y una funcion que le cambia el valor a ese estado
