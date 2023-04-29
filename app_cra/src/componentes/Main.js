@@ -1,20 +1,22 @@
 
-import Info from "../pages/Info"
+import Dulces from "../pages/Dulces";
 import Inicio from "../pages/Inicio"
-import Tienda from "../pages/Tienda"
-import {Route, Routes} from "react-router-dom";
+import Saladas from "../pages/Saladas"
+/* import Tienda from "../pages/Inicio" */
+import {Route, Routes} from "react-router-dom"
 
-
-const Main = (props) => {
+const Main = () => {
 
   return (
+    
+      <Routes>
+        <Route path="/" element={ <Inicio></Inicio> }></Route>
+        <Route path="/categoria/1" element= { <Dulces> </Dulces>}></Route>
+        <Route path="/categoria/2" element= { <Saladas> </Saladas>}></Route>
+        {/* <Route path="/" element={ <Inicio></Inicio> }></Route> */}
+      </Routes>
 
-    <Routes>
-      <Route path="/" element={ <Inicio></Inicio> }></Route>
-      <Route path="/categoria/1" element={ <Inicio></Inicio> }></Route>
-      <Route path="/categoria/2" element={ <Tienda></Tienda> }></Route>
-      <Route path="/categoria/3" element={ <Info></Info> }></Route>
-    </Routes>
+
   )
 }
 

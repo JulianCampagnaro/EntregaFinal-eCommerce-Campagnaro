@@ -10,7 +10,7 @@ const App = () => {
 
     <BrowserRouter>
       <NavBar />
-      <Main titulo="Alimentante de manera ¡inteligente!" />
+      <Main/>
       <Footer />
     </BrowserRouter>
 

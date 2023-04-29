@@ -1,0 +1,11 @@
+[ 
+    {
+        "id":1,
+        "nombre": "Queso",
+        "precio": 780,
+        "stock": 15,
+        "imgUrl": "/images/queso.png",
+        "sabor": "Saladas",
+        "categoria":2
+    }
+]
