@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import ItemListContainer from "../componentes/ItemListContainer";
-
+import { Link } from "react-router-dom";
 const Saladas = () => {
 
     const [productos, setProductos] = useState([]);
@@ -20,6 +20,7 @@ const Saladas = () => {
             <section>
                 <ItemListContainer productos = {productos}></ItemListContainer>
             </section>
+            <Link to="/" className="itemDetailContainer__btn">Ver todas las categorias</Link>
         </main>
 
     )

@@ -45,6 +45,9 @@ html , body , #root {
 .main {
   flex:1;
   padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .main__titulo {
@@ -57,9 +60,17 @@ html , body , #root {
   font-size: 4rem;
 }
 
-.itemListContainer__producto {
+.itemListContainer{
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.itemListContainer__producto {
+  display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   margin-top: 3rem;
@@ -118,12 +129,11 @@ html , body , #root {
 
 .cards {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   gap : 1rem;
   margin : 1rem;
-  
 }
 
 .itemListContainer{
@@ -179,16 +189,12 @@ html , body , #root {
 }
 
 .card {
-  display: flex;
-  justify-content: center;
   align-items: center;
   padding: 1rem;
   border: 1px solid #ccc;
   border-radius: 4px;
   margin-bottom: 1rem;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3);
-  margin-left: 40%;
-  margin-right: 40%;
 }
 
 .card__tienda__link {
@@ -211,4 +217,83 @@ html , body , #root {
 
 .card__tienda__img {
   border-radius: 10px;
+}
+
+
+.itemDetailContainer__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius:  4px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3);
+  margin: 50px;
+  width: 30%;
+  height: 60%;
+}
+
+.itemDetailContainer__card__h2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #9D6B6B;
+  font-size: 2rem;
+  margin:10px;
+}
+
+.itemDetailContainer__card__img {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10px;
+  margin-left: 15px;
+  margin-right: 15px;
+  border-radius: 10px;
+  height: 150%;
+}
+
+
+.itemDetailContainer__card__h3 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #9D6B6B;
+  font-size: 2rem;
+  margin:10px;
+}
+
+.itemDetailContainer__card__p {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #9D6B6B;
+  font-size: 1.5rem;
+  margin:10px;
+}
+
+.itemDetailContainer__btn {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 1rem;
+  text-decoration: none;
+  color: black;
+  border: 2px solid #9D6B6B;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.itemDetailContainer__btn:hover {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 1.1rem;
+  text-decoration: none;
+  background-color: #9D6B6B;
+  color: whitesmoke;
+  border: 2px solid #9D6B6B;
+  padding: 5px;
+  border-radius: 5px;
 }
