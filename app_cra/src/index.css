@@ -309,3 +309,78 @@ html , body , #root {
 .main__img {
   height: auto;
 }
+
+
+.Itemcount {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.Itemcount div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0px;
+
+}
+
+
+.removeButton{
+  background-color: #beb0a7;
+  /* border: 1px solid black; */
+  border: 1px solid ivory;
+  color: ivory;
+  border-radius: 8px;
+  padding: 5px 20px;
+}
+
+.removeButton:hover{
+  background-color: ivory;
+  transition: background-color 1s ease;
+  outline: 0;
+  color: #918882;
+}
+
+
+.addButton{
+  border: 1px solid ivory;
+  border-radius: 8px;
+  background-color: #beb0a7;
+  color: ivory;
+  padding: 5px 20px;
+}
+
+.addButton:hover{
+  background-color: ivory;
+  transition: background-color 1s ease;
+  outline: 0;
+  color: #918882;
+}
+
+
+.count{
+  color: #9D6B6B ;
+  padding: 0px 20px;
+}
+
+
+.addCarrito {
+  border: 1px solid ivory;
+  border-radius: 8px;
+  background-color: #beb0a7;
+  color: ivory;
+  padding: 10px;
+  margin-bottom: 10px;
+    
+}
+
+.addCarrito:hover {
+  background-color: ivory;
+  transition: background-color 1s ease ;
+  outline: 0;
+  color: #918882
+}
+
+
