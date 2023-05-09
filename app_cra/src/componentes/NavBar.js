@@ -19,6 +19,7 @@ const NavBar = () => {
 
       <nav className="header__navBar">
         <NavLink to="/" className="header__navBar__link link">Inicio</NavLink>
+        <NavLink to="/items" className="header__navBar__link link">Catalogo</NavLink>
         <NavLink to="/category/Dulces"  state = "1" className="header__navBar__link link">Dulces</NavLink>
         <NavLink to="/category/Saladas" state = "2" className="header__navBar__link link">Saladas</NavLink>
         <CartWidget/>

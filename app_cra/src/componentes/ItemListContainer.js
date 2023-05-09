@@ -8,6 +8,7 @@ const ItemListContainer = () => {
   /* const {state} = useLocation () */
   const {category} = useParams (); //Acá miro que onda, si es o no alguna categoria filtrada por NavBar
   const [productos, setProductos] = useState([]);
+  const [titulo, setTitulo] = useState ("");
   
 
     useEffect(() => {
@@ -19,10 +20,12 @@ const ItemListContainer = () => {
 
                 const filteredProductos = data.filter((producto) => producto.sabor === category);
                 setProductos(filteredProductos)
+                setTitulo ("Aquí tenes todas las opciones " + category)
 
               }else {
 
                 setProductos(data);
+                setTitulo ("Alimentate de manera ¡inteligente!")
 
               }
             })
@@ -31,7 +34,7 @@ const ItemListContainer = () => {
 
     return (
       <div className="main">
-        <h2 className="main__titulo">Alimentate de manera ¡inteligente!</h2>
+        <h2 className="main__titulo"> {titulo} </h2>
           <ItemList
             productos = {productos}
           ></ItemList>

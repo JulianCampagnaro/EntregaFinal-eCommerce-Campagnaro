@@ -299,3 +299,13 @@ html , body , #root {
   text-decoration: none;
   color: whitesmoke;
 }
+
+
+.main__p {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 2rem;
+}
+
+.main__img {
+  height: auto;
+}
