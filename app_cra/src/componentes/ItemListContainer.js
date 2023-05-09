@@ -1,29 +1,43 @@
-
-import { Link } from "react-router-dom"
-const ItemListContainer = ({productos}) => {
-
-/*   const [cantTortitasDeseadas, setNumeroTortitas] = useState (0);
-
-  function handleClick(){
-    setNumeroTortitas(cantTortitasDeseadas + 1)
-  } */
+import { useState, useEffect } from "react";
+import ItemList from "./ItemList";
+import { useParams } from "react-router-dom";
 
 
-  return (
-    <div className="itemListContainer">
-      <div className="itemListContainer__producto">
-      {productos.map ((producto) => {
-        return(
-        <div  className = "itemListContainer__card" key={producto.id}>
-          <h2 className="itemListContainer__card__h2">{producto.nombre}</h2>
-          <img className="itemListContainer__card__img" src= {producto.imgUrl} alt= {producto.nombre} />
-          <Link to={"/item" + producto.sabor + "/" + producto.id} state={producto} className="itemListContainer__card__btn" id={producto.id}>Ver detalle</Link>
-        </div>
-        )
-      })}
+const ItemListContainer = () => {
+
+  /* const {state} = useLocation () */
+  const {category} = useParams (); //Acá miro que onda, si es o no alguna categoria filtrada por NavBar
+  const [productos, setProductos] = useState([]);
+  
+
+    useEffect(() => {
+        fetch("/productos.json")
+            .then((response) => response.json())
+            .then((data) => {
+
+              if (category) {
+
+                const filteredProductos = data.filter((producto) => producto.sabor === category);
+                setProductos(filteredProductos)
+
+              }else {
+
+                setProductos(data);
+
+              }
+            })
+            .catch((err) => console.log(err));
+      }, [category])
+
+    return (
+      <div className="main">
+        <h2 className="main__titulo">Alimentate de manera ¡inteligente!</h2>
+          <ItemList
+            productos = {productos}
+          ></ItemList>
       </div>
-    </div>
-  )
+    ) 
+
   
 }
 

@@ -139,6 +139,7 @@ html , body , #root {
 .itemListContainer{
   display: flex;
   flex-wrap: wrap;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   gap: 1rem;
@@ -183,9 +184,16 @@ html , body , #root {
   margin:10px;
 }
 
-.itemListContainer__card__btn:hover {
-  color: black;
-  border-bottom: 0.5px solid #9D6B6B;
+.itemListContainer__card__btn__link:hover {
+  color: whitesmoke;
+}
+
+.itemListContainer__card__btn__link {
+  text-decoration: none;
+  color: #9D6B6B;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 1.5rem;
+  margin:10px;
 }
 
 .card {
@@ -229,8 +237,7 @@ html , body , #root {
   border-radius:  4px;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3);
   margin: 50px;
-  width: 30%;
-  height: 60%;
+  width: 100%;
 }
 
 .itemDetailContainer__card__h2 {
@@ -251,7 +258,8 @@ html , body , #root {
   margin-left: 15px;
   margin-right: 15px;
   border-radius: 10px;
-  height: 150%;
+  height: 200%;
+  width: 80%;
 }
 
 
@@ -278,22 +286,16 @@ html , body , #root {
 }
 
 .itemDetailContainer__btn {
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  font-size: 1rem;
   text-decoration: none;
-  color: black;
-  border: 2px solid #9D6B6B;
-  padding: 5px;
-  border-radius: 5px;
+  color: #9D6B6B;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 1.5rem;
+  margin:10px;
+  
 }
 
 .itemDetailContainer__btn:hover {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  font-size: 1.1rem;
   text-decoration: none;
-  background-color: #9D6B6B;
   color: whitesmoke;
-  border: 2px solid #9D6B6B;
-  padding: 5px;
-  border-radius: 5px;
 }
