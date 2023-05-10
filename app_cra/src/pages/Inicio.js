@@ -1,18 +1,26 @@
+import { useEffect, useState } from "react";
+import Carrusel from "../componentes/Carrusel"
 
 const Inicio = () => {
 
+    const [imagenes, setImagenes] = useState([]);
+
+    useEffect(() => {
+        fetch("/carousel.json")
+        .then((response) => response.json())
+        .then((data) => {
+            setImagenes(data);
+        })
+        .catch((err) => console.log(err));
+    }, []);
+
     return (
-
-        
-        <div className="main">
-            <h2 className="main__titulo">¡Bienvenidxs a nuestra hermosa tienda!</h2>
-            <p className="main__p">Nos encontras también en instragram <a href="https://www.instagram.com/healthyTortitas/"><img className="main__img" src="/images/logoig.png"/></a></p>
-            <p className="main__p">¡Pasa a dejarnos tu like y comentarios!</p>
-
+        <div>
+            <h2 className="main__titulo__carousel">Alimentante de manera ¡inteligente!</h2>
+            <Carrusel imagenes={imagenes} />
         </div>
+    );
 
-
-    )
 
 
 }

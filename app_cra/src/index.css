@@ -60,6 +60,29 @@ html , body , #root {
   font-size: 4rem;
 }
 
+.main__titulo__carousel {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: #9D6B6B;
+  font-size: 4rem;
+  position: absolute;
+  top: 20;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  z-index: 1;
+  text-shadow: 1px 1px 2px whitesmoke;
+}
+
+
+.main__carousel__img {
+  height: 850px;
+  display: block;
+}
+
 .itemListContainer{
   display: flex;
   flex-direction: column;
@@ -383,4 +406,72 @@ html , body , #root {
   color: #918882
 }
 
+.main__carousel{
+  height: 80%;
+}
 
+
+@media  (min-width: 540px) and (max-width:920px) {
+
+	.main__titulo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.2rem;
+  }
+}
+
+
+
+
+@media  (min-width: 480px) and (max-width:540px) {
+
+	.main__titulo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+  }
+
+  .header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    justify-items: center;
+    padding: 0 16px;
+    height: 100px;
+    background: #9D6B6B;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    box-shadow: 0 2px 4px rgba (0,0,0,0.4);
+  }
+  
+}
+
+
+
+@media  (min-width: 300px) and (max-width:480px) {
+	.main__titulo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+  }
+
+  .header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    justify-items: center;
+    padding: 0 16px;
+    height: 100px;
+    background: #9D6B6B;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    box-shadow: 0 2px 4px rgba (0,0,0,0.4);
+  }
+
+}

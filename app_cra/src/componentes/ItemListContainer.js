@@ -5,7 +5,6 @@ import { useParams } from "react-router-dom";
 
 const ItemListContainer = () => {
 
-  /* const {state} = useLocation () */
   const {category} = useParams (); //Acá miro que onda, si es o no alguna categoria filtrada por NavBar
   const [productos, setProductos] = useState([]);
   const [titulo, setTitulo] = useState ("");
@@ -25,7 +24,7 @@ const ItemListContainer = () => {
               }else {
 
                 setProductos(data);
-                setTitulo ("Alimentate de manera ¡inteligente!")
+                setTitulo ("Todas nuestras exquisitas tortitas, para vos.")
 
               }
             })

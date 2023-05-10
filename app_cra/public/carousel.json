@@ -1,0 +1,22 @@
+[ 
+{
+    "id":1,
+    "nombre": "Arandanos",
+    "imgUrl": "/images/arandanoss.png",
+    "desc": "Con arándanos de verdad, nada de mentira."
+},
+{
+    "id":2,
+    "nombre": "Frutilla",
+    "imgUrl": "/images/frutillaa.png",
+    "desc": "Si sos amante de las frutillas, no vas a poder resistirte"
+},
+{
+    "id":3,
+    "nombre": "Chocolate",
+    "precio": 780,
+    "stock": 12,
+    "imgUrl": "/images/chocoo.png",
+    "desc": "Para lxs golosxs amantes del choco..."
+}
+]
