@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import ItemList from "./ItemList";
 import { useParams } from "react-router-dom";
+import { getProductos } from "../utils"
+
 
 
 const ItemListContainer = () => {
@@ -14,18 +16,13 @@ const ItemListContainer = () => {
         fetch("/productos.json")
             .then((response) => response.json())
             .then((data) => {
-
               if (category) {
-
                 const filteredProductos = data.filter((producto) => producto.sabor === category);
                 setProductos(filteredProductos)
                 setTitulo ("Aquí tenes todas las opciones " + category)
-
               }else {
-
                 setProductos(data);
                 setTitulo ("Todas nuestras exquisitas tortitas, para vos.")
-
               }
             })
             .catch((err) => console.log(err));
@@ -46,3 +43,22 @@ const ItemListContainer = () => {
 export default ItemListContainer
 
 
+
+
+
+
+/* useEffect(() => {
+  fetch("/productos.json")
+      .then((response) => response.json())
+      .then((data) => {
+        if (category) {
+          const filteredProductos = data.filter((producto) => producto.sabor === category);
+          setProductos(filteredProductos)
+          setTitulo ("Aquí tenes todas las opciones " + category)
+        }else {
+          setProductos(data);
+          setTitulo ("Todas nuestras exquisitas tortitas, para vos.")
+        }
+      })
+      .catch((err) => console.log(err));
+}, [category]) */
