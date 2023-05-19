@@ -207,9 +207,9 @@ html , body , #root {
   margin:10px;
 }
 
-.itemListContainer__card__btn__link:hover {
+/* .itemListContainer__card__btn__link:hover {
   color: whitesmoke;
-}
+} */
 
 .itemListContainer__card__btn__link {
   text-decoration: none;

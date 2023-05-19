@@ -1,45 +1,37 @@
-import { collection, getDocs } from "firebase/firestore";
+import { collection, getDocs, addDoc} from "firebase/firestore";
 import {db} from "./firebase";
 
 //import {collection} from "firebase/firestore" me permite traer la colección que quiero
 
 
 
-export const getProductos = () => {
+export const getProductos =   () => {
 
     const productosCollection = collection ( db, "productos")
-    const consulta = getDocs (productosCollection)
-
-
-    consulta
+    return getDocs (productosCollection)
         .then((response) => {
             console.log ("salio todo bien: ")
-
             const laRespuestaParseada = response.docs.map( (doc) => {
                 const producto = {
                     id: doc.id,
                     ...doc.data ()
                 }
                 return producto //Tranforma cada cosa del response a .json
-
-            })
-            return laRespuestaParseada
-        })
+                
+            }) 
+            return laRespuestaParseada 
+        })        
         .catch ((err) => {
-            console.log ("Hubo un error aquí")
+            console.log ("Hubo un error aquí pidiendo los productos")
         })
-
-
-
 }
 
 
-const saveSale = () => {
-
-
-
-
-
+/* export const saveSale = () => {
+    
+    const ventasCollection = collection (db, "ventas")
+    const consulta = addDoc (ventasCollection, venta)
+    
 }
 
 
@@ -47,6 +39,37 @@ const getProductoDetail = () => {
 
 
 
+} */
 
 
-}
+
+
+
+
+
+
+
+/* export const getProductosPorCategoria = ({category}) => {
+    const productosCollection= collection(db,"productos")
+    const filtro = query (productosCollection, where("sabor", "==", category))
+
+
+    getDocs (filtro)
+    .then((response) => {
+        console.log ("salio todo bien: ")
+        const laRespuestaParseada = response.docs.map( (doc) => {
+            const producto = {
+                id: doc.id,
+                ...doc.data ()
+            }
+            return producto //Tranforma cada cosa del response a .json
+            
+        }) 
+        return laRespuestaParseada 
+    })        
+    .catch ((err) => {
+        console.log ("Hubo un error aquí pidiendo los productos")
+    })
+
+
+} */

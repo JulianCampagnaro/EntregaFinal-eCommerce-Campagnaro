@@ -1,15 +1,27 @@
 /* import { Button }  from  "react-bootstrap"; */
 import ItemCount from "./ItemCount"
+import { useState } from "react"
+import { saveSale } from "../utils"
+
 
 
 const ItemDetail = (props) => {
 
-
+    /* const [venta, setVenta] = useState () */
+    
+    const [cartItems, setCartItems] = useState([]);
     const {stock} = props
     const onAdd = (count) => {
-        alert(`Agregaste ${count} productos`);
-    }; 
+        alert(`Agregaste ${count} productos`); 
+        const item = {
+            nombre: props.nombre,
+            cantidad: count
+        }
+        setCartItems([...cartItems, item]);
+    } //Con esto me voy a guardar bien lo que voy comprando.
 
+
+    console.log ( cartItems)
 
     return (
         <div className="main">
@@ -25,7 +37,6 @@ const ItemDetail = (props) => {
                         stockDisp = {stock}
                     />
                 </div>
-                {/* <Button className="itemDetailContainer__btn" variant="outline-dark">Comprar</Button> */}
             </div>
         </div>
 

@@ -13,7 +13,13 @@ const Cart = () => {
         <main className="main">   
                 <h2 className= "main__titulo">Aquí podrás ver tus elecciones...</h2>
                 <span>{totalItems}</span>
-                <img src="cart-icon.png" alt="Carrito de compras" />
+
+                <button className="addCarrito">
+                    Finalizar Compra, a ser feliz
+                </button>
+
+
+
         </main> 
 
 
