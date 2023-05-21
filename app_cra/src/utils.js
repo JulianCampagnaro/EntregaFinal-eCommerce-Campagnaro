@@ -1,5 +1,8 @@
 import { collection, getDocs, addDoc} from "firebase/firestore";
 import {db} from "./firebase";
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 //import {collection} from "firebase/firestore" me permite traer la colección que quiero
 
@@ -27,16 +30,25 @@ export const getProductos =   () => {
 }
 
 
-export const saveSale = async (cartItems,count) => {
+export const saveCarrito = async (cartItems,count, itemName) => {
     try {
-        console.log("Creando una venta...");
+        await toast.promise(
+            new Promise((resolve) => setTimeout(resolve, 1000)),
+            {
+                pending: "Creando una venta...",
+                success: "Venta guardada exitosamente en Firebase",
+            }
+        );
         const ventasCollection = collection(db, "ventas");
         await addDoc(ventasCollection, {
             cartItems,
             cantidad: count,
+            itemName: itemName,
         });
-        console.log("Venta guardada exitosamente en Firebase");
+        /* console.log ("Venta guardada")
+        toast.success("Venta guardada exitosamente en Firebase"); */
         } catch (error) {
+        toast.error("Error al guardar la venta en Firebase");
         console.log("Error al guardar la venta en Firebase:", error);
         }
 };

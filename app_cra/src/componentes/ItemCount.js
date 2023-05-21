@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const ItemCount = (props) => {
 
@@ -38,6 +40,7 @@ const ItemCount = (props) => {
             </div>
             <button className='addCarrito' onClick={() => props.onAdd(count)}> Agregar al carrito </button>
         </div>
+        <ToastContainer/>
     </>
     );
 };

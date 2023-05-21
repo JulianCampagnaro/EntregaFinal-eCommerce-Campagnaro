@@ -1,8 +1,9 @@
 /* import { Button }  from  "react-bootstrap"; */
 import ItemCount from "./ItemCount"
 import { useState } from "react"
-import { saveSale } from "../utils"
-
+import { saveCarrito } from "../utils"
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const ItemDetail = (props) => {
@@ -30,7 +31,7 @@ const ItemDetail = (props) => {
         }));
         }
         alert(`Agregaste ${count} productos`);
-        saveSale(cartItems,count);
+        saveCarrito(cartItems,count, props.nombre);
     };
 
     
@@ -50,9 +51,12 @@ const ItemDetail = (props) => {
                     />
                 </div>
             </div>
+            <ToastContainer/>
         </div>
     )
 }
+
+
 
 
 export default ItemDetail

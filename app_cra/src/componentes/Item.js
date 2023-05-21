@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from 'react-router-dom'
-import { Button }   from "react-bootstrap";
+
 
 
 const Item = ({producto}) => {
@@ -13,10 +13,6 @@ const Item = ({producto}) => {
             <button  className="addCarrito" >
                 <Link  className="itemListContainer__card__btn__link"  state={producto} to={`/item/${producto.id}`}> Ver más </Link>   
             </button>
-            {/* <Button  className="itemListContainer__card__btn" variant="outline-dark">
-                <Link  className="itemListContainer__card__btn__link"  state={producto} to={`/item/${producto.id}`}> Ver más </Link>   
-            </Button> */}
-    
         </div>
     </div>
         
