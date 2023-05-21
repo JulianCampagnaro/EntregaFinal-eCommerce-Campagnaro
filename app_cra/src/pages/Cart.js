@@ -1,21 +1,43 @@
-import React, { useContext } from 'react';
 import {CustomContext} from "../componentes/CustomProvider"
+import React, { useContext, useEffect, useState } from 'react';
+import { getProductosEnCart, eliminarItemsSeleccionados } from '../utils';
+
 
 
 const Cart = () => {
 
+    const { db } = useContext(CustomContext);
+    const [ventasItems, setVentasItems] = useState([]);
 
-    const { cartItems } = useContext(CustomContext);
-    const totalItems = cartItems.reduce((acc, item) => acc + item.quantity, 0);
+    useEffect(() => {
+        getProductosEnCart ()   
+            .then ((resultado) => {
+                setVentasItems(resultado);
+            })
+    }, [db]);
+
+    
 
     return (
 
         <main className="main">   
-                <h2 className= "main__titulo">Aquí podrás ver tus elecciones...</h2>
-                <span>{totalItems}</span>
+                <h2 className= "main__titulo">Aquí tenes tu pedido...</h2>
+                <div className="itemListContainer">
+                {ventasItems.map((item) => (
+                    <div key={item.id} className="itemListContainer__card">
+                        <h2 className="itemListContainer__card__h2">{item.itemName}</h2>
+                        <img className= "itemListContainer__card__img" src={item.itemImg} alt={item.itemName} />
+                        <p className="itemDetailContainer__card__p">Cantidad: {item.cantidad}</p>
+                    </div>
+                ))}
+                </div>
 
                 <button className="addCarrito">
                     Finalizar Compra, a ser feliz
+                </button>
+
+                <button className="addCarrito" onClick={ () => eliminarItemsSeleccionados(ventasItems) }>
+                    Eliminar carrito
                 </button>
 
 

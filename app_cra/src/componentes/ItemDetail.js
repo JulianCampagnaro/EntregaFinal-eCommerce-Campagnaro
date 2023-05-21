@@ -2,8 +2,6 @@
 import ItemCount from "./ItemCount"
 import { useState } from "react"
 import { saveCarrito } from "../utils"
-import { ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 
 
 const ItemDetail = (props) => {
@@ -30,8 +28,7 @@ const ItemDetail = (props) => {
             [props.id]: item,
         }));
         }
-        alert(`Agregaste ${count} productos`);
-        saveCarrito(cartItems,count, props.nombre);
+        saveCarrito(cartItems,count, props.nombre, props.img);
     };
 
     
@@ -51,7 +48,7 @@ const ItemDetail = (props) => {
                     />
                 </div>
             </div>
-            <ToastContainer/>
+            
         </div>
     )
 }
