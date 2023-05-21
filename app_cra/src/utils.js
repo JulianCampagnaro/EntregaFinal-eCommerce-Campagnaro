@@ -10,7 +10,7 @@ export const getProductos =   () => {
     const productosCollection = collection ( db, "productos")
     return getDocs (productosCollection)
         .then((response) => {
-            console.log ("salio todo bien: ")
+            /* console.log ("salio todo bien: ") */
             const laRespuestaParseada = response.docs.map( (doc) => {
                 const producto = {
                     id: doc.id,
@@ -27,15 +27,22 @@ export const getProductos =   () => {
 }
 
 
-/* export const saveSale = () => {
-    
-    const ventasCollection = collection (db, "ventas")
-    const consulta = addDoc (ventasCollection, venta)
-    
-}
+export const saveSale = async (cartItems,count) => {
+    try {
+        console.log("Creando una venta...");
+        const ventasCollection = collection(db, "ventas");
+        await addDoc(ventasCollection, {
+            cartItems,
+            cantidad: count,
+        });
+        console.log("Venta guardada exitosamente en Firebase");
+        } catch (error) {
+        console.log("Error al guardar la venta en Firebase:", error);
+        }
+};
 
 
-const getProductoDetail = () => {
+/* const getProductoDetail = () => {
 
 
 

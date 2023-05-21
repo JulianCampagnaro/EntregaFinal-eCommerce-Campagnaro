@@ -7,21 +7,33 @@ import { saveSale } from "../utils"
 
 const ItemDetail = (props) => {
 
-    /* const [venta, setVenta] = useState () */
-    
-    const [cartItems, setCartItems] = useState([]);
+    const [cartItems, setCartItems] = useState({});
     const {stock} = props
+
     const onAdd = (count) => {
-        alert(`Agregaste ${count} productos`); 
+        const itemIndex = cartItems[props.id] ? true : false;
+        if (itemIndex) {
+        const updatedCartItems = { ...cartItems };
+        updatedCartItems[props.id].cantidad += count;
+        setCartItems(updatedCartItems);
+        } else {
         const item = {
             nombre: props.nombre,
-            cantidad: count
+            cantidad: count,
+            sabor: props.sabor,
+            idProd: props.id,
+            imgProd: props.img,
+        };
+        setCartItems((prevState) => ({
+            ...prevState,
+            [props.id]: item,
+        }));
         }
-        setCartItems([...cartItems, item]);
-    } //Con esto me voy a guardar bien lo que voy comprando.
+        alert(`Agregaste ${count} productos`);
+        saveSale(cartItems,count);
+    };
 
-
-    console.log ( cartItems)
+    
 
     return (
         <div className="main">
@@ -39,11 +51,9 @@ const ItemDetail = (props) => {
                 </div>
             </div>
         </div>
-
     )
-
-
 }
 
 
 export default ItemDetail
+

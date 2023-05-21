@@ -8,20 +8,16 @@ const ItemCount = (props) => {
 
 
     useEffect(() => {
-    /* console.log(" [useEffect] el componente se monto"); */
     }, []);
 
     useEffect(() => {
-    /* console.log("[useEffect] el estado cambio"); */
     }, [count]);
 
     const addHandler = () => {
-    /* console.log("se esta sumando"); */
     setCount(count + 1);
     };
 
     const removeHandler = () => {
-    /* console.log("se esta restando"); */
     if (count > 1) setCount(count - 1);
     };
 
