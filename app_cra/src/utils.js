@@ -2,9 +2,11 @@ import { collection, getDocs, addDoc, doc, deleteDoc} from "firebase/firestore";
 import {db} from "./firebase";
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { confirmAlert } from 'react-confirm-alert';
+import 'react-confirm-alert/src/react-confirm-alert.css';
+import {Link} from "react-router-dom"
 
 
-//Obtengo los productos de mi base de datos
 export const getProductos =   () => {
 
     const productosCollection = collection ( db, "productos")
@@ -26,8 +28,7 @@ export const getProductos =   () => {
         })
 }
 
-//Me guardo los items seleccionados en el carrito de la base de datos
-export const saveCarrito = async (cartItems,count, itemName, itemImg) => {
+export const saveCarrito = async (cartItems,count, itemName, itemImg, itemCost) => {
     try {
         await toast.promise(
             new Promise((resolve) => setTimeout(resolve, 1000)),
@@ -42,13 +43,13 @@ export const saveCarrito = async (cartItems,count, itemName, itemImg) => {
             cantidad: count,
             itemName: itemName,
             itemImg: itemImg,
+            precio: itemCost,
         });
         } catch (error) {
         toast.error("Error al guardar la venta en la base de datos");
         console.log("Error al guardar la venta en la base de datos:", error);
         }
 };
-
 
 export const getProductosEnCart = async () => {
     
@@ -74,8 +75,6 @@ export const getProductosEnCart = async () => {
     
 };
 
-
-
 export const eliminarItemsSeleccionados = async (ventasItems) => {
     try {
         for (const item of ventasItems) {   
@@ -89,3 +88,30 @@ export const eliminarItemsSeleccionados = async (ventasItems) => {
         }
 };
 
+export const calcularPrecioTotal = (item) => {
+    return item.cantidad * item.precio;
+};
+
+export const calcularPrecioTotalGeneral = (ventasItems) => {
+    const total = ventasItems.reduce(
+        (acc, item) => acc + calcularPrecioTotal(item),
+        0
+    );
+    return total;
+};
+
+
+export const mostrarNotificacionExito = () => {
+    confirmAlert({
+        title: 'Compra procesada',
+        message: 'La compra se ha procesado con éxito.',
+        buttons: [
+            {
+                label: 'Aceptar',
+            }
+        ],
+        closeOnClickOutside: false, // Evita que el SweetAlert se cierre al hacer clic fuera de él
+        closeOnEscape: false
+    });
+    
+};

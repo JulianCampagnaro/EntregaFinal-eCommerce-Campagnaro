@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
-import Carrusel from "../componentes/Carrusel"
+import Carrusel from "../componentes/Carrusel";
+
 
 const Inicio = () => {
-
+    
     const [imagenes, setImagenes] = useState([]);
 
     useEffect(() => {

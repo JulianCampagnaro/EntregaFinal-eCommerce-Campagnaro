@@ -48,6 +48,8 @@ html , body , #root {
   display: flex;
   flex-direction: column;
   align-items: center;
+  /* background: linear-gradient(whitesmoke, 10%, #9D6B6B); */
+
 }
 
 .main__titulo {
@@ -115,13 +117,14 @@ html , body , #root {
 }
 
 .footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 40px;
   background: #9D6B6B;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   color: black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  
 }
 
 .footer__text__a {
@@ -206,10 +209,6 @@ html , body , #root {
   font-size: 1.5rem;
   margin:10px;
 }
-
-/* .itemListContainer__card__btn__link:hover {
-  color: whitesmoke;
-} */
 
 .itemListContainer__card__btn__link {
   text-decoration: none;
@@ -408,6 +407,32 @@ html , body , #root {
 
 .main__carousel{
   height: 80%;
+}
+
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.formulario__div {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #9D6B6B;
+  font-size: 1.5rem;
+  margin:10px;
+}
+
+.formulario__div__label{
+  margin: 10px;
 }
 
 

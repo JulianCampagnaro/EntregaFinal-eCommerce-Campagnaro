@@ -28,7 +28,7 @@ const ItemDetail = (props) => {
             [props.id]: item,
         }));
         }
-        saveCarrito(cartItems,count, props.nombre, props.img);
+        saveCarrito(cartItems,count, props.nombre, props.img, props.precio);
     };
 
     
