@@ -16,7 +16,7 @@ const Inicio = () => {
     }, []);
 
     return (
-        <div>
+        <div className="main">
             <h2 className="main__titulo__carousel">Alimentante de manera ¡inteligente!</h2>
             <Carrusel imagenes={imagenes} />
         </div>

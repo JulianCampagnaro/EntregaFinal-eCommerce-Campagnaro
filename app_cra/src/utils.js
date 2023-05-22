@@ -4,7 +4,6 @@ import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { confirmAlert } from 'react-confirm-alert';
 import 'react-confirm-alert/src/react-confirm-alert.css';
-import {Link} from "react-router-dom"
 
 
 export const getProductos =   () => {
@@ -78,10 +77,10 @@ export const getProductosEnCart = async () => {
 export const eliminarItemsSeleccionados = async (ventasItems) => {
     try {
         for (const item of ventasItems) {   
-            const ventaDocRef = doc(db, "carrito", item.id); // Suponiendo que cada item tiene un campo "id" que representa su identificador en la base de datos
+            const ventaDocRef = doc(db, "carrito", item.id);
             await deleteDoc(ventaDocRef);
         }
-        toast.success("Los items seleccionados se han eliminado de la base de datos.");
+        /* console.log("Los items seleccionados se han eliminado de la base de datos."); */
         window.location.reload();
         } catch (error) {
         console.error("Error al eliminar los items seleccionados:", error);
@@ -114,4 +113,12 @@ export const mostrarNotificacionExito = () => {
         closeOnEscape: false
     });
     
+};
+
+
+export const saveSaleConfirmed = () => {
+
+    
+
+
 };
