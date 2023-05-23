@@ -29,7 +29,6 @@ List of technologies used within the project:
 * [React Icons](https://react-icons.github.io/react-icons/): Version 2.4.1
 * [Sweet Alert](https://sweetalert2.github.io/recipe-gallery/sweetalert2-react.html): Version 11.7.5
 * [Firebase](https://firebase.google.com/?hl=es): Version 9.22.0
-* [React Scripts](https://www.npmjs.com/package/react-scripts): Version 5.0.1
 ***
 ## Installation
 - `$ git clone https://github.com/JulianCampagnaro/PreEntrega2-Campagnaro`
