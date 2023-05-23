@@ -4,7 +4,8 @@
 1. [General Info](#general-info)
 2. [Technologies](#technologies)
 3. [Installation](#installation)
-4. [Functional Test](#installation)
+4. [Functional Test](#funcional-test)
+5. [Developer](#developer)
 ***
 ## General Info
 This project consists essentially of an e-commerce website where the user or customer can view all the options available in our cake flavors catalog. These flavors can be both sweet and savory.
@@ -38,3 +39,6 @@ List of technologies used within the project:
 ***
 ## Functional Test
 The video in which you can see the app running is here: https://drive.google.com/file/d/19COiGSR37L9-gTTV74rvwf23DfZ9-aD6/view?usp=sharing
+***
+## Developer
+You can find me on LinkedIn: https://www.linkedin.com/in/juliancampagnaro/
