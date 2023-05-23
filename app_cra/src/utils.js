@@ -105,7 +105,7 @@ export const mostrarNotificacionExito = (props) => {
                 label: 'Aceptar',
             }
         ],
-        closeOnClickOutside: false, // Evita que el SweetAlert se cierre al hacer clic fuera de él
+        closeOnClickOutside: false, 
         closeOnEscape: false
     });
     

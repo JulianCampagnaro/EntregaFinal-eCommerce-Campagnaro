@@ -7,7 +7,6 @@ const Cart = () => {
 
     const { db } = useContext(CustomContext);
     const [ventasItems, setVentasItems] = useState([]);
-    /* const [precioTotalGeneral, setPrecioTotalGeneral] = useState(0); */
 
     useEffect(() => {
         getProductosEnCart ()   

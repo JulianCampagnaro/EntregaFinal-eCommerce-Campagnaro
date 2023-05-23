@@ -1,8 +1,3 @@
-//Acá va a ir la configuración de firebase, osea la conexión con la plataforma o DB 
-
-// import {} from "firebase"
-// import {} from "firebase/?"
-
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 
@@ -16,9 +11,6 @@ const firebaseConfig = {
 };
 
 
+const app = initializeApp(firebaseConfig); 
 
-
-
-const app = initializeApp(firebaseConfig); //Acá me traigo toooda la plataforma
-
-export const db = getFirestore(app) //Acá solo me traigo la db que quiero
+export const db = getFirestore(app) 
