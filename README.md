@@ -37,3 +37,4 @@ List of technologies used within the project:
 - `$ npm start`
 ***
 ## Functional Test
+The video in which you can see the app running is here: https://drive.google.com/file/d/19COiGSR37L9-gTTV74rvwf23DfZ9-aD6/view?usp=sharing
