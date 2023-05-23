@@ -1,11 +1,9 @@
 import {useState} from "react"
-import {mostrarNotificacionExito} from "../utils"
+import {calcularPrecioTotalGeneral, mostrarNotificacionExito, saveSaleConfirmed} from "../utils"
 import {Link} from "react-router-dom"
 const CheckOutDetail = (props) => {
     
-
     const [camposCompletos, setCamposCompletos] = useState(false);
-
     const [nombre, setNombre] = useState('');
     const [apellido, setApellido] = useState('');
     const [direccion, setDireccion] = useState('');
@@ -23,10 +21,21 @@ const CheckOutDetail = (props) => {
     
     const confirmarCompra = (camposCompletos) => {
         if (camposCompletos) {
-            mostrarNotificacionExito()
+            mostrarNotificacionExito(props.state)
+            const data = {
+                nombre,
+                apellido,
+                direccion,
+                localidad,
+                correo,
+                items: props.state.map((item) => ({
+                cantidad: item.cantidad,
+                itemName: item.itemName,
+                })),
+            };
+            saveSaleConfirmed(data);
         }
     }
-
 
     return (
             <div className ="main">
@@ -76,7 +85,7 @@ const CheckOutDetail = (props) => {
                             />
                         </div>
                         <div className="formulario__div">
-                            <h2 className="formulario__div__label" >Total a Pagar ${props.precio}</h2>
+                            <h2 className="formulario__div__label" >Total a Pagar ${calcularPrecioTotalGeneral(props.state)}</h2>
                         </div>
                         <Link to="/">
                             <button className="addCarrito" type="submit" onClick ={confirmarCompra} disabled={!camposCompletos}>Confirmar Compra</button>

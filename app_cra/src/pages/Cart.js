@@ -1,26 +1,23 @@
 import {CustomContext} from "../componentes/CustomProvider"
-/* import CheckOut from '../componentes/CheckOut';
- */
 import React, { useContext, useEffect, useState } from 'react';
 import { getProductosEnCart, eliminarItemsSeleccionados, calcularPrecioTotalGeneral, calcularPrecioTotal } from '../utils';
 import { Link } from 'react-router-dom'
-
-
 
 const Cart = () => {
 
     const { db } = useContext(CustomContext);
     const [ventasItems, setVentasItems] = useState([]);
-    const [precioTotalGeneral, setPrecioTotalGeneral] = useState(0);
+    /* const [precioTotalGeneral, setPrecioTotalGeneral] = useState(0); */
 
     useEffect(() => {
         getProductosEnCart ()   
             .then ((resultado) => {
                 setVentasItems(resultado);
-                const totalGeneral = calcularPrecioTotalGeneral(resultado);
-                setPrecioTotalGeneral(totalGeneral);
+                /* const totalGeneral = calcularPrecioTotalGeneral(resultado);
+                setPrecioTotalGeneral(totalGeneral); */
             })
     }, [db]);
+    
 
 
     if ( ventasItems.length===0 ) {
@@ -51,7 +48,7 @@ const Cart = () => {
                     <h2 className="itemListContainer__card__h2">
                         Precio Total General: ${calcularPrecioTotalGeneral(ventasItems)}
                     </h2>
-                    <Link to= "/finalizarCompra" state= {precioTotalGeneral}  >
+                    <Link to= "/finalizarCompra" state= { ventasItems }  >
                         <button className="addCarrito">
                             Finalizar Compra, a ser feliz
                         </button>

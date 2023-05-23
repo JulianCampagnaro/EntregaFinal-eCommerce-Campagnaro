@@ -12,11 +12,13 @@ const CheckOut = (  ) => {
     return (
         <main className="main">
             <CheckOutDetail
-                precio= {state}
+                state= {state}
                 handleSubmit = {handleSubmit}    
             ></CheckOutDetail>
         </main>
     );
+
+    
 };
 
 export default CheckOut;

@@ -67,11 +67,7 @@ export const getProductosEnCart = async () => {
         })        
         .catch ((err) => {
             console.log ("Hubo un error aquí pidiendo los productos")
-        })
-
-
-
-    
+        }) 
 };
 
 export const eliminarItemsSeleccionados = async (ventasItems) => {
@@ -100,7 +96,7 @@ export const calcularPrecioTotalGeneral = (ventasItems) => {
 };
 
 
-export const mostrarNotificacionExito = () => {
+export const mostrarNotificacionExito = (props) => {
     confirmAlert({
         title: 'Compra procesada',
         message: 'La compra se ha procesado con éxito.',
@@ -116,9 +112,38 @@ export const mostrarNotificacionExito = () => {
 };
 
 
-export const saveSaleConfirmed = () => {
+export const saveSaleConfirmed = async (data) => {
 
+    /* const {
+        cantidad,
+        itemName,
+        nombre,
+        apellido,
+        direccion,
+        localidad,
+        correo,
+        items
+    } = data;
+
+    console.log (data) */
+
+    try {
+        await toast.promise(
+            new Promise((resolve) => setTimeout(resolve, 1000)),
+            {
+                pending: "Confirmando compra...",
+                success: "Venta confirmada y guardada en BD",
+            }
+        );
     
-
-
+        const ventaGuardadaCollection = collection(db, "ventaFinal");
+        await addDoc(ventaGuardadaCollection, {
+            data
+        });
+    
+        toast.success("Venta confirmada y guardada en BD");
+    } catch (error) {
+        toast.error("Error al guardar la venta en la base de datos");
+        console.log("Error al guardar la venta en la base de datos:", error);
+    }
 };
