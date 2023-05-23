@@ -31,7 +31,9 @@ List of technologies used within the project:
 * [React Scripts](https://www.npmjs.com/package/react-scripts): Version 5.0.1
 ***
 ## Installation
-`$ git clone https://github.com/JulianCampagnaro/PreEntrega2-Campagnaro`
-`$ cd app_cra`
-`$ npm install` | add all the technologies listed before |
-`$ npm start`
+- `$ git clone https://github.com/JulianCampagnaro/PreEntrega2-Campagnaro`
+- `$ cd app_cra`
+- `$ npm install` | add all the technologies listed before |
+- `$ npm start`
+***
+## Functional Test
