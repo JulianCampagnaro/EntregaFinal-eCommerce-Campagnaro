@@ -42,6 +42,6 @@ List of technologies used within the project:
 * You can also deploy the app through the following link: [deployVercel](https://drive.google.com/file/d/13YZoIjpNbVx6AY9H9XHtjnCeEP1fGqHY/view?usp=sharing)
 ***
 ## Developer
-You can find me on LinkedIn: [JuliánCampagnaro](https://www.linkedin.com/in/juliancampagnaro/)
-Repository of this project on GitHub: [GitHubProject](https://github.com/JulianCampagnaro/EntregaFinal-eCommerce-Campagnaro)
-Deploy on Vercel:[appOnVercel](https://entrega-final-e-commerce-campagnaro-23052023.vercel.app/)
+* You can find me on LinkedIn: [JuliánCampagnaro](https://www.linkedin.com/in/juliancampagnaro/)
+* Repository of this project on GitHub: [GitHubProject](https://github.com/JulianCampagnaro/EntregaFinal-eCommerce-Campagnaro)
+* Deploy on Vercel:[appOnVercel](https://entrega-final-e-commerce-campagnaro-23052023.vercel.app/)
