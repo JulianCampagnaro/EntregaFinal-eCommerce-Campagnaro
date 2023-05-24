@@ -32,7 +32,7 @@ List of technologies used within the project:
 * [React Scripts](https://www.npmjs.com/package/react-scripts): Version 5.0.1
 ***
 ## Installation
-- `$ git clone https://github.com/JulianCampagnaro/PreEntrega2-Campagnaro`
+- `$ git clone https://github.com/JulianCampagnaro/EntregaFinal-eCommerce-Campagnaro`
 - `$ cd app_cra`
 - `$ npm install` | add all the technologies listed before |
 - `$ npm start`
@@ -44,4 +44,4 @@ List of technologies used within the project:
 ## Developer
 * You can find me on LinkedIn: [JuliánCampagnaro](https://www.linkedin.com/in/juliancampagnaro/)
 * Repository of this project on GitHub: [GitHubProject](https://github.com/JulianCampagnaro/EntregaFinal-eCommerce-Campagnaro)
-* Deploy on Vercel:[appOnVercel](https://entrega-final-e-commerce-campagnaro-23052023.vercel.app/)
+* Deploy on Vercel: [appOnVercel](https://entrega-final-e-commerce-campagnaro-23052023.vercel.app/)
