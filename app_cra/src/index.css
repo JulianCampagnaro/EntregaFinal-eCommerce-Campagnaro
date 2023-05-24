@@ -498,6 +498,17 @@ html , body , #root {
     box-shadow: #9D6B6B;
   } 
 
+  .itemListContainer__card__h2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #9D6B6B;
+    font-size: 2rem;
+    margin:10px;
+  }
+
 }
 
 
@@ -543,6 +554,17 @@ html , body , #root {
     border-radius: 10px;
     box-shadow: #9D6B6B;
   } 
+
+  .itemListContainer__card__h2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #9D6B6B;
+    font-size: 1.8rem;
+    margin:10px;
+  }
   
 }
 
@@ -587,5 +609,16 @@ html , body , #root {
     border-radius: 10px;
     box-shadow: #9D6B6B;
   } 
+
+  .itemListContainer__card__h2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #9D6B6B;
+    font-size: 1.5rem;
+    margin:10px;
+  }
 
 }
