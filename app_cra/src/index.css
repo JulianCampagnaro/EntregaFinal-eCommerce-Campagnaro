@@ -509,6 +509,17 @@ html , body , #root {
     margin:10px;
   }
 
+  .itemDetailContainer__card__p {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #9D6B6B;
+    font-size: 1.5rem;
+    margin:10px;
+  }
+
 }
 
 
@@ -565,6 +576,17 @@ html , body , #root {
     font-size: 1.8rem;
     margin:10px;
   }
+
+  .itemDetailContainer__card__p {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #9D6B6B;
+    font-size: 1.3rem;
+    margin:10px;
+  }
   
 }
 
@@ -618,6 +640,17 @@ html , body , #root {
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #9D6B6B;
     font-size: 1.5rem;
+    margin:10px;
+  }
+
+  .itemDetailContainer__card__p {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #9D6B6B;
+    font-size: 1rem;
     margin:10px;
   }
 
