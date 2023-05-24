@@ -38,8 +38,8 @@ List of technologies used within the project:
 - `$ npm start`
 ***
 ## Functional Test
-* The video in which you can see the app running is here: [appRuning] (https://drive.google.com/file/d/19COiGSR37L9-gTTV74rvwf23DfZ9-aD6/view?usp=sharing)
-* You can also deploy the app through the following link: [deployVercel] (https://drive.google.com/file/d/13YZoIjpNbVx6AY9H9XHtjnCeEP1fGqHY/view?usp=sharing)
+* The video in which you can see the app running is here: [appRuning](https://drive.google.com/file/d/19COiGSR37L9-gTTV74rvwf23DfZ9-aD6/view?usp=sharing)
+* You can also deploy the app through the following link: [deployVercel](https://drive.google.com/file/d/13YZoIjpNbVx6AY9H9XHtjnCeEP1fGqHY/view?usp=sharing)
 ***
 ## Developer
 You can find me on LinkedIn: https://www.linkedin.com/in/juliancampagnaro/
