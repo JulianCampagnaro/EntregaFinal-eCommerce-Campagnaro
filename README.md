@@ -39,6 +39,9 @@ List of technologies used within the project:
 ***
 ## Functional Test
 The video in which you can see the app running is here: https://drive.google.com/file/d/19COiGSR37L9-gTTV74rvwf23DfZ9-aD6/view?usp=sharing
+You can also deploy the app through the following link: https://drive.google.com/file/d/13YZoIjpNbVx6AY9H9XHtjnCeEP1fGqHY/view?usp=sharing
 ***
 ## Developer
 You can find me on LinkedIn: https://www.linkedin.com/in/juliancampagnaro/
+Repository of this project on GitHub: https://github.com/JulianCampagnaro/EntregaFinal-eCommerce-Campagnaro
+Deploy on Vercel: https://entrega-final-e-commerce-campagnaro-23052023.vercel.app/
