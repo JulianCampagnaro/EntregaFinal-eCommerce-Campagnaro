@@ -559,7 +559,7 @@ html , body , #root {
     align-items: center;
     justify-items: center;
     padding: 0 16px;
-    height: 80px;
+    height: 70px;
     background: #9D6B6B;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     box-shadow: 0 2px 4px rgba (0,0,0,0.4);
@@ -575,7 +575,7 @@ html , body , #root {
 
   .header__navBar__link {
     color: white;
-    margin-left: 0.7rem;
+    margin-left: 0.3rem;
     text-decoration: none;
     } 
 
@@ -621,7 +621,7 @@ html , body , #root {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
   
   .main__titulo__carousel {
@@ -629,7 +629,7 @@ html , body , #root {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    font-size: 2rem;
+    font-size: 1.6rem;
   }
 
   .header {
@@ -639,7 +639,7 @@ html , body , #root {
     align-items: center;
     justify-items: center;
     padding: 0 16px;
-    height: 80px;
+    height: 70px;
     background: #9D6B6B;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     box-shadow: 0 2px 4px rgba (0,0,0,0.4);
@@ -654,7 +654,7 @@ html , body , #root {
 
   .header__navBar__link {
     color: white;
-    margin-left: 0.5rem;
+    margin-left: 0.3rem;
     text-decoration: none;
   }
 
