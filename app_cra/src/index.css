@@ -699,6 +699,13 @@ html , body , #root {
   .formulario__div__label input{
     width: auto;
   }
+
+  .footer__text {
+    font-size: 0.7rem;
+  }
   
+  .footer__text__a {
+    font-size: 0.7rem;
+  }
 
 }
