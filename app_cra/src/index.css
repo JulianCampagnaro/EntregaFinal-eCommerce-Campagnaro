@@ -77,13 +77,6 @@ html , body , #root {
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   color: #9D6B6B;
   font-size: 4rem;
-  /* position: absolute;
-  top: 20;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  z-index: 1;
-  text-shadow: 1px 1px 2px whitesmoke; */
 }
 
 
@@ -534,6 +527,12 @@ html , body , #root {
 
 
 
+
+
+
+/* Responsive */
+
+
 @media  (min-width: 480px) and (max-width:540px) {
 
 	.main__titulo {
@@ -615,13 +614,14 @@ html , body , #root {
 
 
 
-@media  (min-width: 300px) and (max-width:480px) {
+@media  (min-width: 200px) and (max-width:480px) {
+
 	.main__titulo {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    font-size: 1.4rem;
+    font-size: 1.3rem;
   }
   
   .main__titulo__carousel {
@@ -629,7 +629,7 @@ html , body , #root {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    font-size: 1.6rem;
+    font-size: 1.3rem;
   }
 
   .header {
@@ -646,7 +646,7 @@ html , body , #root {
   }
 
   .main__carousel__img {
-    height: 505px;
+    height: 500px;
     width:auto;
     object-fit:cover;
     border-radius: 10px;
@@ -654,8 +654,14 @@ html , body , #root {
 
   .header__navBar__link {
     color: white;
-    margin-left: 0.3rem;
+    margin-left: 1rem;
     text-decoration: none;
+    font-size: 1rem;
+  }
+
+  .header__navBar__link img {
+    height: 30px;
+    width: 30px;
   }
 
   .cart__vacio__img {
@@ -689,5 +695,10 @@ html , body , #root {
     font-size: 1rem;
     margin:10px;
   }
+
+  .formulario__div__label input{
+    width: auto;
+  }
+  
 
 }
