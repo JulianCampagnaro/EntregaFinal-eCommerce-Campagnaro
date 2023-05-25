@@ -621,7 +621,7 @@ html , body , #root {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
   }
   
   .main__titulo__carousel {
@@ -629,7 +629,7 @@ html , body , #root {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
   }
 
   .header {
@@ -656,7 +656,7 @@ html , body , #root {
     color: white;
     margin-left: 1rem;
     text-decoration: none;
-    font-size: 1rem;
+    font-size: 0.7rem;
   }
 
   .header__navBar__link img {
