@@ -708,4 +708,8 @@ html , body , #root {
     font-size: 0.7rem;
   }
 
+  .formulario__div__label {
+    font-size: 0.8rem;
+  }
+
 }
